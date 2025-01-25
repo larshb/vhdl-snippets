@@ -1,1 +1,59 @@
-{}
+{
+    "signal": {
+        "prefix": "signal",
+        "body": [
+            "signal ${1:<name>} : ${2:std_logic};"
+        ]
+    },
+    "std_logic_vector": {
+        "prefix": "slv",
+        "body": [
+            "std_logic_vector(${1:31} ${2:downto} ${3:0})${4}"
+        ]
+    },
+    "(others => '0')": {
+        "prefix": "others",
+        "body": [
+            "others => ${1:'0'}"
+        ]
+    },
+    "integer-range": {
+        "prefix": "integer-range",
+        "body": [
+            "integer range ${1:-2147483647} ${2:to} ${3:2147483647}"
+        ]
+    },
+    "entity": {
+        "prefix": "ieee-entity",
+        "body": [
+            "library ieee;",
+            "  use ieee.std_logic_1164.all;${6:\n  use ieee.numeric_std.all;}",
+            "",
+            "entity ${1:${TM_FILENAME_BASE}} is",
+            "  port (",
+            "    ${3:i_clk}   : in    std_logic;",
+            "    ${4:i_reset} : in    std_logic",
+            "  );",
+            "end entity ${1:${TM_FILENAME_BASE}};",
+            "",
+            "architecture ${2:rtl} of ${1:${TM_FILENAME_BASE}} is",
+            "",
+            "  -- Signals",
+            "",
+            "begin",
+            "",
+            "  ${5:p_sync} : process (${3:i_clk}) is",
+            "  begin",
+            "    if rising_edge(${3:i_clk}) then",
+            "      if (${4:i_reset} = '1') then",
+            "      else",
+            "      end if;",
+            "    end if;",
+            "  end process ${5:p_sync};",
+            "",
+            "end architecture ${2:rtl};",
+            ""
+        ],
+        "description": "Creates a VHDL entity template with standard libraries."
+    }
+}
