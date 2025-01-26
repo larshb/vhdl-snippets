@@ -1,20 +1,25 @@
 {
-  "name": "larshb-vhdl-snippets",
-  "displayName": "larshb-vhdl-snippets",
-  "description": "",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.96.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "vhdl",
-        "path": "./snippets/snippets.code-snippets"
-      }
-    ]
-  }
+	"name": "larshb-vhdl-snippets",
+	"displayName": "VHDL Snippets",
+	"description": "VHDL Snippets",
+	"publisher": "larshb",
+	"version": "0.0.1",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.96.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vhdl",
+				"path": "./snippets/snippets.code-snippets"
+			}
+		]
+	},
+	"__metadata": {
+		"size": 36533
+	}
 }
