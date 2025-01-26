@@ -21,5 +21,9 @@
 	},
 	"__metadata": {
 		"size": 36533
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/larshb/vhdl-snippets.git"
 	}
 }
