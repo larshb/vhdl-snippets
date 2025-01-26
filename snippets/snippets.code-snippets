@@ -39,6 +39,7 @@
             "architecture ${2:rtl} of ${1:${TM_FILENAME_BASE}} is",
             "",
             "  -- Signals",
+            "  ${7}",
             "",
             "begin",
             "",
